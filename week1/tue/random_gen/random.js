@@ -26,28 +26,29 @@ var thatArray = ["Facebook Platform","Erlang Enthusiasts","Ex-Girlfriends",
 var arrayConcat = thisArray.concat(thatArray);
 
 function shuffle () {
-  var i = 0
-    , j = 0
-    , temp = null
 
-  for (i = arrayConcat.length - 1; i > 0; i -= 1) {
-    j = Math.floor(Math.random() * (i + 1))
-    temp = arrayConcat[i]
-    arrayConcat[i] = arrayConcat[j]
-    arrayConcat[j] = temp
+  for (var i = arrayConcat.length - 1; i > 0; i -= 1) {
+    var j = Math.floor(Math.random()*(i+1));
+    var temp = arrayConcat[i];
+    arrayConcat[i] = arrayConcat[j];
+    arrayConcat[j] = temp;
   }
 }
 
-shuffle()
+
+
 
 function randomGenerator() {
 
-  shuffle();
+    shuffle();
 
   for (var i = 0; i < arrayConcat.length; i++) {
-  var displayIdea = arrayConcat[i];
+
+    var displayIdea = arrayConcat[i];
+
+    document.getElementById('display').innerHTML = displayIdea;
   }
 
-  document.getElementById('display').innerHTML = displayIdea;
+
 
 }
