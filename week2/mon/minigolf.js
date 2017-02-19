@@ -22,77 +22,30 @@ console.log("mini golf connected!");
 // Hole 9 = 5
 
 
-var bobResults = [
-
-  {holeNo: 1,
-  holeRes: 3},
-
-  {holeNo: 2,
-    holeRes: 2},
-
-  {holeNo: 3,
-    holeRes: 6},
-
-  {holeNo: 4,
-    holeRes: 11},
-
-  {holeNo: 5,
-  holeRes: 9},
-
-  {holeNo: 6,
-    holeRes: 2},
-
-  {holeNo: 7,
-    holeRes: 6},
-
-  {holeNo:  8,
-    holeRes: 9},
-
-  {holeNo: 9,
-    holeRes: 10}
-
-];
+var bobResults = [3, 2, 6, 11, 9, 2, 6, 9, 10];
 
 
-var jimboResults = [
+var jimboResults = [5,12,9,22,13,7,16,10,11]
 
-  {Hole1: 5},
-  {Hole2: 12},
-  {Hole3: 9},
-  {Hole4 : 22},
-  {Hole5 : 13},
-  {Hole6 : 7},
-  {Hole7 : 16},
-  {Hole8 : 10},
-  {Hole9 : 11},
 
-];
-var fishResults = [
+var fishResults = [2,2,4,5,4,3,6,4,1];
 
-  {Hole1: 2},
-  {Hole2: 2},
-  {Hole3: 4},
-  {Hole4: 5},
-  {Hole5: 4},
-  {Hole6: 3},
-  {Hole7: 6},
-  {Hole8: 4},
-  {Hole9: 1},
 
-];;
 
 function totalScores(bobResults, jimboResults, fishResults) {
 
-  for (var i = 0; i < bobResults.length; i++) {
+  var tempResult =0;
 
-    var bobResultSumArray = [];
-    bobResultSumArray.push(bobResults[i].holeRes);
+    for (var i = 0; i < bobResults.length; i++) {
+        tempResult = bobResults[i]
+
+        var sum = tempResult + this.bobResults;
+        console.log(sum);
+
+    }
+    return sum;
 
 
-    console.log(bobResultSumArray);
-  }
-
-  return bobResultSumArray
 
 }
-var bobResultSumArray = totalScores(bobResults, jimboResults, fishResults)
+var sum = totalScores(bobResults, jimboResults, fishResults)
